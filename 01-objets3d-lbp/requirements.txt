@@ -1,0 +1,9 @@
+numpy>=1.24
+opencv-python>=4.8
+Pillow>=10.0
+trimesh>=4.0
+pyrender>=0.1.45
+# pyrender declare une dependance stricte sur PyOpenGL==3.1.0, mais cette
+# version plante (glGenTextures) des qu'un mesh texture est rendu sous
+# Python 3.13 / Windows. 3.1.6 fonctionne correctement pour le rendu offscreen.
+PyOpenGL==3.1.6

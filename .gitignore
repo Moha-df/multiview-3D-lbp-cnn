@@ -1,0 +1,9 @@
+# Ancien depot conserve pour inspiration, ne doit pas etre commit ici
+parking-old/
+
+# Objets 3D telecharges (gros volume, regenerable via download_dataset.js)
+01-objets3d-lbp/data/
+
+# Cache Python
+__pycache__/
+*.pyc

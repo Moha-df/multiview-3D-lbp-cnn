@@ -1,0 +1,9 @@
+mode,libelle,descripteur,correct,total,taux
+gris_global,"gris, global (reference)",256,26,34,76.47
+gris_grille2x2,"gris, grille 2x2",1024,31,34,91.18
+gris_grille3x3,"gris, grille 3x3",2304,31,34,91.18
+gris_grille4x4,"gris, grille 4x4",4096,31,34,91.18
+gris_pyramide,"gris, pyramide (1+2x2+4x4)",5376,31,34,91.18
+gris_multirayon,"gris, multi-rayon (R=1,2,3)",768,29,34,85.29
+couleur_mosaic_pyramide,"couleur mosaique, pyramide",5376,31,34,91.18
+couleur_perchannel_pyramide,"couleur par plan R/G/B, pyramide",16128,31,34,91.18
