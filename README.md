@@ -2,7 +2,7 @@
 
 Caracterisation d'objets 3D (categorie : chaussure, bouteille/canette/gobelet,
 sac, jeu de societe, figurine) a partir d'images composites 6-vues rendues
-depuis de vrais objets scannes, avec la meme demarche que `parking-old` :
+depuis de vrais objets scannes, avec la meme demarche que [smart-parking-lbp-to-cnn](https://github.com/Moha-df/smart-parking-lbp-to-cnn) :
 LBP global -> LBP multi-echelle/couleur -> CNN.
 
 ## Donnees
@@ -33,7 +33,7 @@ de section, sont surtout pedagogiques).
 ![Comparaison des modes](02-objets3d-lbp-multiechelle/resultats/comparaison-modes.png)
 
 Le graphique le plus important du depot. Il separe les deux ameliorations
-testees dans `parking-old` (03 = couleur, 04 = multi-echelle) et montre
+testees dans [smart-parking-lbp-to-cnn](https://github.com/Moha-df/smart-parking-lbp-to-cnn) (03 = couleur, 04 = multi-echelle) et montre
 laquelle compte vraiment ici :
 
 - **decouper l'image en blocs fait tout le travail** : 76,47 % (LBP global)
@@ -63,7 +63,7 @@ dans le choix de nos propres quotas par categorie.
 
 ![CNN face aux reperes LBP](03-objets3d-cnn/resultats/benchmark-cnn.png)
 
-Contrairement a `parking-old/05` (ou le CNN, avec 200 imagettes pour 2
+Contrairement a [`05-parking-cnn`](https://github.com/Moha-df/smart-parking-lbp-to-cnn/tree/main/05-parking-cnn) (ou le CNN, avec 200 imagettes pour 2
 categories, approchait le meilleur LBP), ici le CNN plafonne autour du LBP
 **global** (moyenne 76,77 % contre 76,47 %) et n'atteint jamais le LBP
 **pyramidal** (91,18 %). La difference tient aux donnees, pas a la methode :
@@ -90,7 +90,7 @@ un objet precis a ete confondu), pas des mesures agregees.
 1. Sur ce dataset, **la structure spatiale (blocs) domine largement la
    couleur** comme source d'amelioration du LBP.
 2. **Le nombre d'objets par categorie** (12 a 25 ici, contre 100 dans
-   `parking-old`) est le facteur limitant commun aux trois etudes : c'est
+   [smart-parking-lbp-to-cnn](https://github.com/Moha-df/smart-parking-lbp-to-cnn)) est le facteur limitant commun aux trois etudes : c'est
    lui qui explique a la fois les confusions residuelles du LBP pyramidal
    et l'echec du CNN a rivaliser avec lui.
 3. Avec trop peu de donnees par classe, un descripteur fait main bien concu
@@ -103,7 +103,6 @@ un objet precis a ete confondu), pas des mesures agregees.
 01-objets3d-lbp/                   telechargement + rendu 6-vues + LBP global
 02-objets3d-lbp-multiechelle/      LBP multi-echelle (pyramidal) x couleur
 03-objets3d-cnn/                   CNN entraine sur les pixels
-parking-old/                       depot d'origine (parking, non versionne ici)
 ```
 
 Chaque dossier `0X-...` est autonome (son propre `README.md`, ses scripts,

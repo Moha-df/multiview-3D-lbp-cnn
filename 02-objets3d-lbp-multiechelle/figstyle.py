@@ -1,6 +1,6 @@
 """Style commun des figures : palette validee, chrome discret, fond opaque.
 
-Identique a parking-old/04-parking-lbp-multiechelle/figstyle.py.
+Identique a smart-parking-lbp-to-cnn/04-parking-lbp-multiechelle/figstyle.py.
 """
 
 import matplotlib

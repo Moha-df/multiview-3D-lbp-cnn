@@ -1,5 +1,5 @@
-"""Descripteurs combinant l'echelle spatiale (parking-old/04) et la couleur
-(parking-old/03), appliques aux images composites 6-vues.
+"""Descripteurs combinant l'echelle spatiale (smart-parking-lbp-to-cnn/04) et la couleur
+(smart-parking-lbp-to-cnn/03), appliques aux images composites 6-vues.
 
 Deux axes independants :
 

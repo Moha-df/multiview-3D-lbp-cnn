@@ -1,6 +1,6 @@
 """Evalue le CNN sur plusieurs graines d'entrainement independantes.
 
-A la difference de parking-old/05-parking-cnn (qui repioche 200+200
+A la difference de smart-parking-lbp-to-cnn/05-parking-cnn (qui repioche 200+200
 imagettes dans un grand pool a chaque tirage), notre jeu train/test est fixe
 (94 / 34 images, voir 01-objets3d-lbp/manifest.csv) : il n'y a pas assez
 d'objets par categorie pour retirer des splits differents sans les

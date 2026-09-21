@@ -1,6 +1,6 @@
 """Descripteur LBP (Local Binary Pattern) 3x3, 256 motifs.
 
-Identique a parking-old/01-parking-lbp/lbp.py. Convention de parcours de la
+Identique a smart-parking-lbp-to-cnn/01-parking-lbp/lbp.py. Convention de parcours de la
 fenetre 3x3 (spirale horaire depuis le coin superieur gauche), poids
 binaires associes a chaque voisin :
 

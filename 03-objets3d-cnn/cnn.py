@@ -5,7 +5,7 @@ directement sur les pixels de l'image composite 6-vues (couleur, 768x128).
 Le jeu training ne compte que 94 images pour 5 categories, d'ou une
 architecture volontairement petite, une legere augmentation de donnees et un
 arret anticipe sur une validation decoupee dans le training - exactement la
-demarche de parking-old/05-parking-cnn, adaptee au multi-classe et a la
+demarche de smart-parking-lbp-to-cnn/05-parking-cnn, adaptee au multi-classe et a la
 couleur.
 """
 

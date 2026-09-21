@@ -1,13 +1,13 @@
 # LBP multi-echelle (pyramidal) et couleur
 
 Reprend `01-objets3d-lbp` en combinant deux ameliorations testees separement
-dans `parking-old` :
+dans [smart-parking-lbp-to-cnn](https://github.com/Moha-df/smart-parking-lbp-to-cnn) :
 
-- **echelle spatiale** (`parking-old/04-...`) : au lieu d'un histogramme LBP
+- **echelle spatiale** ([`04-parking-lbp-multiechelle`](https://github.com/Moha-df/smart-parking-lbp-to-cnn/tree/main/04-parking-lbp-multiechelle)) : au lieu d'un histogramme LBP
   global (qui perd toute position), l'image est decoupee en blocs, un
   histogramme par bloc, tous concatenes. Le mode **pyramide** combine les
   grilles 1x1 + 2x2 + 4x4 dans un seul descripteur.
-- **couleur** (`parking-old/03-...`) : LBP calcule soit sur la mosaique des
+- **couleur** ([`03-parking-lbp-couleur`](https://github.com/Moha-df/smart-parking-lbp-to-cnn/tree/main/03-parking-lbp-couleur)) : LBP calcule soit sur la mosaique des
   plans R, G, B juxtaposes, soit un LBP par plan avec histogrammes
   concatenes.
 
@@ -27,7 +27,7 @@ python explain_classification.py --mode gris_pyramide  # explications visuelles
 ## Resultats
 
 Un seul essai par mode (le train/test est fixe, pas de tirages repetes comme
-dans `parking-old` qui piochait dans un grand pool) :
+dans [smart-parking-lbp-to-cnn](https://github.com/Moha-df/smart-parking-lbp-to-cnn) qui piochait dans un grand pool) :
 
 | Mode | Descripteur | Taux |
 | --- | --- | --- |
@@ -40,9 +40,9 @@ dans `parking-old` qui piochait dans un grand pool) :
 | couleur mosaique, pyramide | 5376 val | 91,18 % (31/34) |
 | couleur par plan R/G/B, pyramide | 16128 val | 91,18 % (31/34) |
 
-Meme constat que dans `parking-old/04` : d'ecouper l'image en blocs
+Meme constat que dans [`04-parking-lbp-multiechelle`](https://github.com/Moha-df/smart-parking-lbp-to-cnn/tree/main/04-parking-lbp-multiechelle) : d'ecouper l'image en blocs
 (l'echelle spatiale) apporte un vrai gain (76,47 % -> 91,18 %), des la
-grille 2x2. Et meme constat que dans `parking-old/03` : **la couleur
+grille 2x2. Et meme constat que dans [`03-parking-lbp-couleur`](https://github.com/Moha-df/smart-parking-lbp-to-cnn/tree/main/03-parking-lbp-couleur) : **la couleur
 n'apporte rien de plus** une fois l'echelle spatiale en place - le LBP est
 invariant aux changements monotones d'intensite, et les trois plans R/G/B
 de nos rendus portent la meme texture. Le multi-rayon (voisinage circulaire)

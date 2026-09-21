@@ -1,6 +1,6 @@
 """Classification 1 plus proche voisin des descripteurs LBP (5 categories).
 
-Meme protocole que parking-old/01-parking-lbp : distance L1 (somme des
+Meme protocole que smart-parking-lbp-to-cnn/01-parking-lbp : distance L1 (somme des
 differences en valeurs absolues) entre le descripteur test et chacun des
 descripteurs training, label du plus proche voisin retenu.
 """

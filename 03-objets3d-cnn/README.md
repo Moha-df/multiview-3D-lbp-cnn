@@ -1,6 +1,6 @@
 # Classification par CNN
 
-Reprend `parking-old/05-parking-cnn` : au lieu d'un descripteur fait main
+Reprend [`05-parking-cnn`](https://github.com/Moha-df/smart-parking-lbp-to-cnn/tree/main/05-parking-cnn) : au lieu d'un descripteur fait main
 (LBP, `01-objets3d-lbp` et `02-objets3d-lbp-multiechelle`), un petit CNN
 apprend directement sur les pixels de l'image composite 6-vues (couleur,
 768x128, redimensionnee en 384x64 pour l'entrainement). Multi-classe cette
@@ -10,7 +10,7 @@ fois (5 categories, sortie softmax) au lieu du binaire libre/occupe.
 
 Le train/test reste celui fixe au telechargement des objets (94 / 34
 images, voir `01-objets3d-lbp/manifest.csv`). Contrairement a
-`parking-old/05` qui repioche 200 + 200 imagettes dans un grand pool a
+[`05-parking-cnn`](https://github.com/Moha-df/smart-parking-lbp-to-cnn/tree/main/05-parking-cnn) qui repioche 200 + 200 imagettes dans un grand pool a
 chaque tirage, nos categories n'ont que 17 a 53 objets au total : impossible
 de retirer des splits vraiment differents sans repetition. Les "graines"
 d'entrainement (`benchmark.py`, 10 executions) font donc varier
@@ -30,7 +30,7 @@ Flatten -> Dense(64) -> Dropout(0.5) -> Dense(5, softmax)
 ```
 
 `EarlyStopping` sur la perte de validation (decoupe stratifiee 80/20 du
-training), comme dans `parking-old/05`.
+training), comme dans [`05-parking-cnn`](https://github.com/Moha-df/smart-parking-lbp-to-cnn/tree/main/05-parking-cnn).
 
 ## Resultats
 
@@ -41,7 +41,7 @@ training), comme dans `parking-old/05`.
 
 Le CNN rejoint a peu pres le LBP **global** (76,47 %) mais reste nettement
 en dessous du LBP **pyramidal** (91,18 %, `02-objets3d-lbp-multiechelle`).
-A l'inverse de `parking-old` (ou le CNN, avec 200 imagettes pour 2
+A l'inverse de [smart-parking-lbp-to-cnn](https://github.com/Moha-df/smart-parking-lbp-to-cnn) (ou le CNN, avec 200 imagettes pour 2
 categories, egalait presque le meilleur LBP), ici 94 images pour 5
 categories (12 a 25 par categorie) ne suffisent pas a un CNN entraine de
 zero pour rivaliser avec un descripteur fait main qui exploite la structure

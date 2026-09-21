@@ -1,6 +1,6 @@
 """Metriques de comparaison d'histogrammes LBP.
 
-Identique a parking-old/02-parking-distances/distances.py. Chaque metrique
+Identique a smart-parking-lbp-to-cnn/02-parking-distances/distances.py. Chaque metrique
 renvoie, pour un descripteur test et l'ensemble des descripteurs du
 training, un vecteur de scores. `better` indique si le plus proche voisin
 correspond au score minimal ("min") ou maximal ("max").

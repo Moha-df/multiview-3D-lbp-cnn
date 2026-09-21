@@ -1,6 +1,6 @@
 """Briques multi-echelle : decoupage en blocs, pyramide, voisinage circulaire.
 
-Identique dans l'esprit a parking-old/04-parking-lbp-multiechelle/multiscale.py.
+Identique dans l'esprit a smart-parking-lbp-to-cnn/04-parking-lbp-multiechelle/multiscale.py.
 Ces fonctions operent sur un tableau 2D quelconque (niveaux de gris, un plan
 de couleur, ou l'image mosaique R|G|B) : la notion de "canal" est geree a part
 dans color.py / descriptors.py.

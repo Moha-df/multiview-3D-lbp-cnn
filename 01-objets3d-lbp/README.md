@@ -60,12 +60,12 @@ en une image composite 768x128, stockee dans `data/renders/<categorie>/<train|te
 
 ### Classification LBP (1-plus-proche-voisin)
 
-Meme descripteur et meme protocole que `parking-old/01-parking-lbp` :
+Meme descripteur et meme protocole que [`01-parking-lbp`](https://github.com/Moha-df/smart-parking-lbp-to-cnn/tree/main/01-parking-lbp) :
 histogramme LBP 256 motifs (fenetre 3x3) sur l'image composite en niveaux de
 gris, classification par plus proche voisin (distance L1).
 
 **76,47 % de reconnaissance (26/34)** sur ce premier essai. En comparant les
-7 metriques de `parking-old/02-parking-distances` (`compare.py`), Chi-2
+7 metriques de [`02-parking-distances`](https://github.com/Moha-df/smart-parking-lbp-to-cnn/tree/main/02-parking-distances) (`compare.py`), Chi-2
 fait mieux : **88,24 % (30/34)**.
 
 | Metrique | Taux |
@@ -96,5 +96,5 @@ capture pas la structure spatiale de l'objet).
 
 ## Prochaine etape
 
-Reprendre l'approche multi-echelle / spatiale de `parking-old/04-...` (LBP
-par blocs) puis le CNN de `05-parking-cnn`, sur ces memes images composites.
+Reprendre l'approche multi-echelle / spatiale de [`04-parking-lbp-multiechelle`](https://github.com/Moha-df/smart-parking-lbp-to-cnn/tree/main/04-parking-lbp-multiechelle) (LBP
+par blocs) puis le CNN de [`05-parking-cnn`](https://github.com/Moha-df/smart-parking-lbp-to-cnn/tree/main/05-parking-cnn), sur ces memes images composites.

@@ -5,7 +5,7 @@ download_dataset.js), centre, mis a l'echelle, puis "photographie"
 virtuellement selon les 6 directions cardinales (face, dos, droite, gauche,
 dessus, dessous). Les 6 vues sont concatenees horizontalement en une seule
 image composite (meme principe que la mosaique RGB de
-parking-old/03-parking-lbp-couleur), qui devient l'imagette utilisee par le
+smart-parking-lbp-to-cnn/03-parking-lbp-couleur), qui devient l'imagette utilisee par le
 LBP.
 """
 

@@ -1,6 +1,6 @@
 """Lecture couleur et strategies de mise en forme des 3 plans R, G, B.
 
-Identique dans l'esprit a parking-old/03-parking-lbp-couleur/color.py.
+Identique dans l'esprit a smart-parking-lbp-to-cnn/03-parking-lbp-couleur/color.py.
 """
 
 import cv2
